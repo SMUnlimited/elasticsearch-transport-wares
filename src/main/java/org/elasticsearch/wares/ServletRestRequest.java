@@ -29,6 +29,8 @@ import org.elasticsearch.rest.support.RestUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -105,8 +107,8 @@ public class ServletRestRequest extends RestRequest {
             String headerName = e.nextElement();
             headers.put(headerName, servletRequest.getHeader(headerName));
         }
-
-        return ImmutableList.copyOf(headers.entrySet());
+        ArrayList list = new ArrayList<Map.Entry<String, String>>();
+        return Collections.unmodifiableList(list);
     }
 
     @Override

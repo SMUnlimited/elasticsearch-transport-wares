@@ -1,6 +1,9 @@
 Servlet Transport for Elasticsearch
 ==================================
 
+This is a fork to support building locally for elasticsearch 2.1.0 as there is no official release of transport wares.
+
+
 The wares transport plugin allows to use the REST interface over servlets. You don't really install this plugin,
 but instead use the jar file in addition to elasticsearch itself in your web app using the maven repo:
 
